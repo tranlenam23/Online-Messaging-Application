@@ -1,0 +1,99 @@
+﻿<Page x:Class="ChatOnline.List_Members"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ChatOnline"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="List_Members">
+
+    <Page.RenderTransform>
+        <TranslateTransform X="0" Y="500"/>
+    </Page.RenderTransform>
+    <Grid Margin="0,-10,0,-10" Width="755" Height="460">
+        <Grid Width="300" Background="White" Height="401">
+            <Button Width="15" Height="15" Margin="275,5,10,381" Template="{StaticResource NoMouseOverButtonTemplate}" BorderThickness="0" Click="Close">
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/cancel_icon.png" Stretch="UniformToFill"/>
+                </Button.Background>
+            </Button>
+            <Label Width="80" Height="25" Content="Members" Foreground="Black" FontWeight="Bold" RenderTransformOrigin="0.483,-3.132" Margin="110,0,110,376"/>
+            <Border Width="270" Height="25" Background="#FF617DC5" CornerRadius="10" RenderTransformOrigin="0.499,-3.047" Margin="15,30,15,346">
+                <TextBox x:Name="TextBox_Search" Width="270" Background="Transparent" BorderThickness="0" Text="&#8981; Search Friends" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" Padding="0,3,0,3" GotFocus="Search_TextBox_GotFocus" LostFocus="Search_TextBox_LostFocus" KeyUp="TextBox_Search_KeyUp"/>
+            </Border>
+            <Border Margin="10,78,10,10" BorderBrush="Gray" BorderThickness="0" >
+                <ListView x:Name="Friend_ListView" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="0" d:ItemsSource="{d:SampleData ItemCount=5}" Height="313">
+
+                    <ListView.View>
+                        <GridView >
+                            <GridViewColumn Header="Chats" Width="278">
+
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" Cursor="Hand" Margin="0,9,0,0" Width="278">
+                                            <Grid Width="278">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="2*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Button  Grid.Column="0" Tag="{Binding UserName}" Click="View_Friend">
+                                                    <Button.Background>
+                                                        <ImageBrush ImageSource="{Binding Avatar}"/>
+                                                    </Button.Background>
+                                                    <Button.Template>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Grid>
+                                                                <Ellipse Width="30" Height="30" Fill="{TemplateBinding Background}" />
+                                                            </Grid>
+                                                        </ControlTemplate>
+                                                    </Button.Template>
+                                                </Button>
+                                                <TextBlock Text="{Binding UserName}" Grid.Column="1" VerticalAlignment="Center" FontWeight="Bold" Foreground="Black"/>
+
+                                            </Grid>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+
+                    </ListView.View>
+                    <ListView.Resources>
+                        <Style TargetType="GridViewColumnHeader">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                        </Style>
+                    </ListView.Resources>
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <Border BorderBrush="Transparent" BorderThickness="0" Background="{TemplateBinding Background}">
+                                            <GridViewRowPresenter HorizontalAlignment="Stretch" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Width="Auto" Margin="0" Content="{TemplateBinding Content}"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.Foreground>
+                        <SolidColorBrush Color="Transparent"/>
+                    </ListView.Foreground>
+                    <ListView.Background>
+                        <SolidColorBrush Color="#FFF1F1F1" Opacity="1"/>
+                    </ListView.Background>
+                    <ListView.BorderBrush>
+                        <SolidColorBrush Color="Transparent"/>
+                    </ListView.BorderBrush>
+                </ListView>
+                <Border.Effect>
+                    <DropShadowEffect Color="Black" Direction="270" ShadowDepth="5" Opacity="0.7"/>
+                </Border.Effect>
+            </Border>
+        </Grid>
+        
+    </Grid>
+</Page>

@@ -1,0 +1,61 @@
+﻿<Application x:Class="ChatOnline.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ChatOnline"
+             StartupUri="MainWindow.xaml">
+    
+    <Application.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+         TargetType="Button">
+            <Border Background="{TemplateBinding Background}"  
+  BorderBrush="{TemplateBinding BorderBrush}"  
+  BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+              VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+     Value="False">
+                    <Setter Property="Background"  
+      Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+      Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        
+        <ControlTemplate x:Key="NoMouseOverRadioButtonTemplate"   
+       TargetType="RadioButton">
+            <Border Background="{TemplateBinding Background}"  
+BorderBrush="{TemplateBinding BorderBrush}"  
+BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"  
+   Value="False">
+                    <Setter Property="Background"  
+    Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"  
+    Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="NoMouseOverListViewTemplate" TargetType="ListView">
+            <ItemsPresenter />
+        </ControlTemplate>
+        <Style x:Key="CheckedRadioButtonStyle" TargetType="RadioButton">
+            <Style.Triggers>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter Property="Width" Value="40" />
+                    <Setter Property="Height" Value="40" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Application.Resources>
+    
+</Application>

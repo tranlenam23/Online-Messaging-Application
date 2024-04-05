@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatOnline", "ChatOnline\ChatOnline.csproj", "{336136B0-AA8A-4FBB-9DDD-B9F351709BCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatOnline.SignalR", "ChatOnline.SignalR\ChatOnline.SignalR.csproj", "{04362EF4-1040-44CD-ACE0-DB91091F314D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{336136B0-AA8A-4FBB-9DDD-B9F351709BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{336136B0-AA8A-4FBB-9DDD-B9F351709BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{336136B0-AA8A-4FBB-9DDD-B9F351709BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{336136B0-AA8A-4FBB-9DDD-B9F351709BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04362EF4-1040-44CD-ACE0-DB91091F314D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04362EF4-1040-44CD-ACE0-DB91091F314D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04362EF4-1040-44CD-ACE0-DB91091F314D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04362EF4-1040-44CD-ACE0-DB91091F314D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D6822F9-E3C7-45EC-ABD9-5BBB17F51C96}
+	EndGlobalSection
+EndGlobal

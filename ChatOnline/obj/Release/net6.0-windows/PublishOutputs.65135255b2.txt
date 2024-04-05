@@ -1,0 +1,5 @@
+D:\ổ C\chatonline\ChatOnline.exe
+D:\ổ C\chatonline\ChatOnline.dll
+D:\ổ C\chatonline\ChatOnline.deps.json
+D:\ổ C\chatonline\ChatOnline.runtimeconfig.json
+D:\ổ C\chatonline\ChatOnline.pdb

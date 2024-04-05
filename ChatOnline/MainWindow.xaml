@@ -1,0 +1,40 @@
+﻿<Window x:Class="ChatOnline.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatOnline"
+        Closing="Window_Closing"
+        Title="ChatApp" Height="490" Width="800" WindowStartupLocation="CenterScreen"
+        >
+    
+    <Window.Icon>
+        <ImageSource>mess.png</ImageSource>
+    </Window.Icon>
+    <Window.Resources>
+        <Storyboard x:Key="PushUp">
+            <DoubleAnimation  Duration="0:0:0.01"/>
+        </Storyboard>
+        
+    </Window.Resources>
+    <Window.Background>
+        <SolidColorBrush Color="Black" Opacity="0"/>
+    </Window.Background>
+
+    <Grid>
+        
+        <Border>
+            <Border.Background>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/background.jpeg" Opacity="0.3">
+                    <ImageBrush.Stretch>UniformToFill</ImageBrush.Stretch>
+                </ImageBrush>
+            </Border.Background>
+
+
+        </Border>
+        <Viewbox>
+            <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden" Margin="0,11,0,-1"/>
+        </Viewbox>
+    </Grid>
+
+</Window>
